@@ -1,0 +1,99 @@
+
+ 
+ @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap');
+ 
+ 
+ *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background: #dde1e7;
+        font-family: "Poppins", sans-serif;
+    }
+
+    .container{
+        height: 350px;
+        width: 300px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 30px;
+        box-shadow: 5px 5px 5px rgba(0,0,0,0.5),
+                -5px -5px 5px rgba(255,255,255,0.5);
+    }
+
+    .heading{
+        font-size: 30px;
+        color: #3d3d3d;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    .chances{
+        color: #3d3d3d;
+        margin-bottom: 10px;
+        display: none;
+    }
+
+    .ply_One_input,
+    .ply_two_input{
+        width: 80%;
+        height: 40px;
+        border:none;
+        outline: none;
+        padding: 0 20px;
+        font-size: 20px;
+        background: transparent;
+        border-radius: 50px;
+        box-shadow: 3px 3px 5px rgba(0,0,0,0.5) inset,
+                    -3px -3px 5px rgba(255,255,255,0.5) inset;
+    }
+
+    .btn_one,
+    .btn_two{
+        width: 40%;
+        height: 50px;
+        border:none;
+        outline: none;
+        font-size: 20px;
+        font-weight: 500;
+        color: #3d3d3d;
+        letter-spacing: 1.5px;
+        margin-top: 30px;
+        cursor: pointer;
+        background: transparent;
+        border-radius: 30px;
+        transition: 0.4s;
+        box-shadow: 3px 3px 5px rgba(0,0,0,0.5) inset,
+                    -3px -3px 5px rgba(255,255,255,0.5) inset;
+    }
+
+
+    .error{
+        font-size: 16px;
+        font-weight: 500;
+        color: red;
+        text-transform: capitalize;
+        padding-top: 10px;
+    }
+
+    .ply_two_input{
+        display: none;
+    }
+
+    .btn_two{
+        display: none;
+    }
+
+   .winner{
+    font-size: 25px;
+    font-weight: 600;
+   }
