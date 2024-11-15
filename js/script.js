@@ -2,19 +2,29 @@ let container = document.querySelector('.container')
 let heading = document.querySelector('.heading')
 let plyOneInput = document.querySelector('.ply_One_input')
 let plyTwoInput = document.querySelector('.ply_two_input')
+let plyThreeInput = document.querySelector('.ply_three_input')
+let plyFourInput = document.querySelector('.ply_four_input')
 let btnOne = document.querySelector('.btn_one')
 let btnTwo = document.querySelector('.btn_two')
+let btnThree = document.querySelector('.btn_three')
+let btnFour = document.querySelector('.btn_four')
 let error = document.querySelector('.error')
 let chance = document.querySelector('.chances')
 let count = document.querySelector('span')
-let winner = document.querySelector('.winner')
+let winner1 = document.querySelector('.winner1')
+let winner2 = document.querySelector('.winner2')
+let winner3 = document.querySelector('.winner3')
 let plyOneVlu;
+let plyTwoVlo;
+let plyThreeVlo;
 let c = "5";
+let c2 = "5"
+let c3 = "5"
+let c4 = "5"
 
 
 btnOne.addEventListener('click', () => {
     
-
     if(plyOneInput.value == ""){
     error.innerHTML = "please give a number"
     }
@@ -48,8 +58,6 @@ btnOne.addEventListener('click', () => {
     
 
 btnTwo.addEventListener('click', () =>{
-
-
     
     if( c >= 1 ) {
 
@@ -66,45 +74,142 @@ btnTwo.addEventListener('click', () =>{
                 count.innerHTML = c
                 
                 if(plyOneVlu == plyTwoInput.value) {
-                    chance.innerHTML = "Player-2 Win"
-                    chance.style.color = "#03a9f0"
-                    heading.innerHTML = "Game Over"
-                    heading.style.color = "#03a9f0"
-                    winner.innerHTML = "Congratulations"
-                    winner.style.color = "#03a9f0"
-                    displayControll("all")
-                    
+                    plyTwoVlo =  "Player-2 Winner"
+                    heading.innerHTML = "Player-3"
+                    count.innerHTML = c2
+                    displayControll('p2np3b')
                 }
                 else{
                     if(c == 0){
-                    chance.innerHTML = "Player-1 Win"
-                    chance.style.color = "#03a9f0"
-                    heading.innerHTML = "Game Over"
-                    heading.style.color = "#03a9f0"
-                    winner.innerHTML = "Congratulations"
-                    winner.style.color = "#03a9f0"
-                    displayControll("all")
+                    plyTwoVlo = "Player-2 Loser"
+                    heading.innerHTML = "Player-3" 
+                    count.innerHTML = c2
+                    displayControll('p2np3b')
                 } 
             }
            }
-
-          
            else{
             error.innerHTML = "give a number between 1 to 10"
        }
-           
-    
             }
             else{
             error.innerHTML = "please give a number"
             } }
     }
-    // else {
-    //      chance.innerHTML = "Player-1 Win"
-    //      heading.innerHTML = "Game Over"
-    // }
 
 })
+
+
+
+
+btnThree.addEventListener('click', () => {
+
+    if( c2 >= 1 ) {
+
+        if(plyThreeInput.value == "") {
+            error.innerHTML = "please give a number"
+            }
+        else {
+            
+           if(Number(plyThreeInput.value)){
+                
+           if(plyThreeInput.value > 0 && plyThreeInput.value <= 10) {
+                error.innerHTML = ""
+                c2--
+                count.innerHTML = c2
+                
+                if(plyOneVlu == plyThreeInput.value) {
+                    plyThreeVlo =  "Player-3 Winner"
+                    count.innerHTML = c3
+                    heading.innerHTML = "Player-4"
+                    displayControll('p3np4b')
+                }
+                else{
+                    if(c2 == 0){
+                    plyThreeVlo = "Player-3 Loser"
+                    count.innerHTML = c3
+                    heading.innerHTML = "Player-4"          
+                    displayControll('p3np4b')
+                } 
+            }
+           }
+           else{
+            error.innerHTML = "give a number between 1 to 10"
+         }
+            }
+            else{
+            error.innerHTML = "please give a number"
+            } }
+    }
+
+})
+
+
+
+btnFour.addEventListener('click', () => {
+
+    if( c4 >= 1 ) {
+
+        if(plyFourInput.value == "") {
+            error.innerHTML = "please give a number"
+            }
+        else {
+            
+           if(Number(plyFourInput.value)){
+                
+           if(plyFourInput.value > 0 && plyFourInput.value <= 10) {
+                error.innerHTML = ""
+                c4--
+                count.innerHTML = c4
+                
+                if(plyOneVlu == plyFourInput.value) {
+                    heading.innerHTML = "Game Over"
+                    chance.innerHTML = "Congratulations"
+                    chance.style.fontSize = '25px'
+                    displayControll('all')
+                    winner1.innerHTML = plyTwoVlo
+                    winner2.innerHTML = plyThreeVlo
+                    winner3.innerHTML = "Player-4 Winner"
+                    winner1.style.color = "#03a9f0"
+                    winner2.style.color = "#03a9f0"
+                    winner3.style.color = "#03a9f0"
+                  
+                    
+                }
+                else{
+                    if(c4 == 0){
+                    heading.innerHTML = "Game Over"
+                    chance.innerHTML = "Congratulations"
+                    chance.style.fontSize = '25px'
+                    displayControll('all')
+                    winner1.innerHTML = plyTwoVlo
+                    winner2.innerHTML = plyThreeVlo
+                    winner3.innerHTML = "Player-4 Loser"
+                    winner1.style.color = "#03a9f0"
+                    winner2.style.color = "#03a9f0"
+                    winner3.style.color = "#03a9f0"
+                   
+                } 
+            }
+           }
+           else{
+            error.innerHTML = "give a number between 1 to 10"
+         }
+            }
+            else{
+            error.innerHTML = "please give a number"
+            } }
+    }
+
+
+})
+
+
+
+
+
+
+
 
 
     function displayControll(type){
@@ -126,22 +231,34 @@ btnTwo.addEventListener('click', () =>{
             btnOne.style.display = "inline-block"
         }
         else if(type == "p2b") {
-            plyOneInput.style.display = "inline-block"
-            btnOne.style.display = "inline-block"
+            plyTwoInput.style.display = "inline-block"
+            btnTwo.style.display = "inline-block"
         }
        else if(type == "p1n") {
             plyOneInput.style.display = "none"
             btnOne.style.display = "none"
         }
        else if(type == "p2n") {
-            plyOneInput.style.display = "none"
-            btnOne.style.display = "none"
+            plyTwoInput.style.display = "none"
+            btnTwo.style.display = "none"
+        }
+
+        else if(type == "p2np3b") {
+            plyTwoInput.style.display = "none"
+            btnTwo.style.display = "none"
+            plyThreeInput.style.display = "inline-block"
+            btnThree.style.display = "inline-block"
+        }
+
+        else if(type == "p3np4b") {
+            plyThreeInput.style.display = "none"
+            btnThree.style.display = "none"
+            plyFourInput.style.display = "inline-block"
+            btnFour.style.display = "inline-block"
         }
 
         else if(type == "all") {
-            plyTwoInput.style.display = "none"
-            btnTwo.style.display = "none"
-            plyOneInput.style.display = "none"
-            btnOne.style.display = "none"
+            plyFourInput.style.display = "none"
+            btnFour.style.display = "none"
         }
     }

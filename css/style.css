@@ -39,7 +39,7 @@
         font-size: 30px;
         color: #3d3d3d;
         font-weight: 600;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         text-transform: uppercase;
     }
 
@@ -50,7 +50,9 @@
     }
 
     .ply_One_input,
-    .ply_two_input{
+    .ply_two_input,
+    .ply_three_input,
+    .ply_four_input{
         width: 80%;
         height: 40px;
         border:none;
@@ -64,7 +66,9 @@
     }
 
     .btn_one,
-    .btn_two{
+    .btn_two,
+    .btn_three,
+    .btn_four{
         width: 40%;
         height: 50px;
         border:none;
@@ -94,12 +98,28 @@
     .ply_two_input{
         display: none;
     }
-
     .btn_two{
         display: none;
     }
 
-   .winner{
-    font-size: 25px;
+    .ply_three_input{
+        display: none;
+    }
+
+    .btn_three{
+        display: none;
+    }
+    
+    .ply_four_input{
+        display: none;
+    }
+    
+    .btn_four{
+        display: none;
+    }
+   .winner1,
+   .winner2,
+   .winner3{
+    font-size: 22px;
     font-weight: 600;
    }
