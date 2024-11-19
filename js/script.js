@@ -18,9 +18,6 @@ let plyOneVlu;
 let plyTwoVlo;
 let plyThreeVlo;
 let c = "5";
-let c2 = "5"
-let c3 = "5"
-let c4 = "5"
 
 
 btnOne.addEventListener('click', () => {
@@ -76,14 +73,16 @@ btnTwo.addEventListener('click', () =>{
                 if(plyOneVlu == plyTwoInput.value) {
                     plyTwoVlo =  "Player-2 Winner"
                     heading.innerHTML = "Player-3"
-                    count.innerHTML = c2
+                    c = "5"
+                    count.innerHTML = c
                     displayControll('p2np3b')
                 }
                 else{
                     if(c == 0){
                     plyTwoVlo = "Player-2 Loser"
                     heading.innerHTML = "Player-3" 
-                    count.innerHTML = c2
+                    c = "5"
+                    count.innerHTML = c
                     displayControll('p2np3b')
                 } 
             }
@@ -104,7 +103,7 @@ btnTwo.addEventListener('click', () =>{
 
 btnThree.addEventListener('click', () => {
 
-    if( c2 >= 1 ) {
+    if( c >= 1 ) {
 
         if(plyThreeInput.value == "") {
             error.innerHTML = "please give a number"
@@ -115,19 +114,21 @@ btnThree.addEventListener('click', () => {
                 
            if(plyThreeInput.value > 0 && plyThreeInput.value <= 10) {
                 error.innerHTML = ""
-                c2--
-                count.innerHTML = c2
+                c--
+                count.innerHTML = c
                 
                 if(plyOneVlu == plyThreeInput.value) {
                     plyThreeVlo =  "Player-3 Winner"
-                    count.innerHTML = c3
+                    c = "5"
+                    count.innerHTML = c
                     heading.innerHTML = "Player-4"
                     displayControll('p3np4b')
                 }
                 else{
-                    if(c2 == 0){
+                    if(c == 0){
                     plyThreeVlo = "Player-3 Loser"
-                    count.innerHTML = c3
+                    c = "5"
+                    count.innerHTML = c
                     heading.innerHTML = "Player-4"          
                     displayControll('p3np4b')
                 } 
@@ -148,7 +149,7 @@ btnThree.addEventListener('click', () => {
 
 btnFour.addEventListener('click', () => {
 
-    if( c4 >= 1 ) {
+    if( c >= 1 ) {
 
         if(plyFourInput.value == "") {
             error.innerHTML = "please give a number"
@@ -159,8 +160,8 @@ btnFour.addEventListener('click', () => {
                 
            if(plyFourInput.value > 0 && plyFourInput.value <= 10) {
                 error.innerHTML = ""
-                c4--
-                count.innerHTML = c4
+                c--
+                count.innerHTML = c
                 
                 if(plyOneVlu == plyFourInput.value) {
                     heading.innerHTML = "Game Over"
@@ -177,7 +178,7 @@ btnFour.addEventListener('click', () => {
                     
                 }
                 else{
-                    if(c4 == 0){
+                    if(c == 0){
                     heading.innerHTML = "Game Over"
                     chance.innerHTML = "Congratulations"
                     chance.style.fontSize = '25px'
