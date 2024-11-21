@@ -52,7 +52,13 @@
     .ply_One_input,
     .ply_two_input,
     .ply_three_input,
-    .ply_four_input{
+    .ply_four_input,
+    .ply_five_input,
+    .ply_six_input,
+    .ply_seven_input,
+    .ply_eight_input,
+    .ply_nine_input,
+    .ply_ten_input{
         width: 80%;
         height: 40px;
         border:none;
@@ -69,7 +75,13 @@
     .btn_one,
     .btn_two,
     .btn_three,
-    .btn_four{
+    .btn_four,
+    .btn_five,
+    .btn_six,
+    .btn_seven,
+    .btn_eight,
+    .btn_nine,
+    .btn_ten{
         width: 40%;
         height: 50px;
         border:none;
@@ -96,31 +108,48 @@
         padding-top: 10px;
     }
 
-    .ply_two_input{
-        display: none;
-    }
+    .ply_two_input,
     .btn_two{
         display: none;
     }
-
-    .ply_three_input{
-        display: none;
-    }
-
+   
+    .ply_three_input,
     .btn_three{
         display: none;
     }
-    
-    .ply_four_input{
-        display: none;
-    }
-    
+
+    .ply_four_input,
     .btn_four{
         display: none;
     }
-   .winner1,
-   .winner2,
-   .winner3{
-    font-size: 22px;
+    .ply_five_input,
+    .btn_five{
+        display: none;
+    }
+    .ply_six_input,
+    .btn_six{
+        display: none;
+    }
+    .ply_seven_input,
+    .btn_seven{
+        display: none;
+    }
+    .ply_eight_input,
+    .btn_eight{
+        display: none;
+    }
+    .ply_nine_input,
+    .btn_nine{
+        display: none;
+    }
+    .ply_ten_input,
+    .btn_ten{
+        display: none;
+    }
+    
+  
+    .Winners{
+    font-size: 16px;
     font-weight: 600;
+    margin-bottom: 5px;
    }
